@@ -20,13 +20,19 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 mx-auto mt-2 max-w-6xl rounded-xl w-[95%] backdrop-blur-md bg-background/80 border-b border-border/50 shadow-md">
-    <div className="container px-4">
+<header className="sticky top-0 z-50 w-full bg-background border-b border-border">
+  <div className="container mx-auto px-4">
+
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <h1 className="text-2xl font-bold gradient-text">EntertainHub</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight flex items-baseline gap-1">
+              <span className="bold text-primary-glow">MAYO</span>
+
+              <span className="text-sm font-medium text-muted-foreground relative top-1 text-primary-glow">news</span>
+              <span className="text-primary text-3xl leading-none text-primary-glow">.</span>
+           </h1>
             </Link>
           </div>
 
@@ -36,10 +42,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`transition-colors duration-200 hover:text-primary ${
+                className={`transition-colors duration-200 hover:text-primary-glow ${
                   location.pathname === item.href 
-                    ? 'text-primary font-medium' 
-                    : 'text-foreground/80 hover:text-foreground'
+                    ? 'text-primary-glow font-bold' 
+                    : 'text-primary-glow hover:text-primary-glow'
                 }`}
               >
                 {item.name}
@@ -98,8 +104,8 @@ const Header = () => {
                   to={item.href}
                   className={`transition-colors duration-200 py-2 ${
                     location.pathname === item.href 
-                      ? 'text-primary font-medium' 
-                      : 'text-foreground/80 hover:text-primary'
+                      ? 'text-primary-glow font-bold' 
+                      : 'text-primary-glow hover:text-primary-glow'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
