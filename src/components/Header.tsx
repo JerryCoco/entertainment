@@ -20,13 +20,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 mx-auto mt-2 max-w-6xl rounded-xl w-[95%] backdrop-blur-md bg-background/80 border-b border-border/50 shadow-md">
-    <div className="container px-4">
+  <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white border-b border-border text-primary-background">
+     <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <h1 className="text-2xl font-bold gradient-text">EntertainHub</h1>
+            <Link to="/" className="flex items-center">   
+            <h1 className="text-3xl font-extrabold uppercase text-purple-700">
+              MAYO
+              <span className="text-sm font-normal text-colors-ring ml-2 normal-case">news</span>
+            </h1>
+
             </Link>
           </div>
 
