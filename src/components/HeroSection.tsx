@@ -1,40 +1,28 @@
 "use client";
-
 import { Carousel } from "@/components/ui/carousel";
 
 const slides = [
   {
-    title: "Latest Blockbuster Movies",
-    button: "Watch Now",
+    title: "Breaking News: Global Events Update",
+    button: "Read More",
     src: "/images/slide1.jpg",
   },
   {
-    title: "Trending Music Hits",
-    button: "Listen",
+    title: "Entertainment: Top Stories in Music & Film",
+    button: "Explore",
     src: "/images/slide2.jpg",
   },
   {
-    title: "Celebrity Gossip & News",
-    button: "Read More",
+    title: "Sports: Major Highlights of the Week",
+    button: "Watch Highlights",
     src: "/images/slide3.jpg",
   },
 ];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-white" />
-        
-      {/* Content */}
-      
-      {/* Carousel */}
-      <div className="relative z-10 mt-12">
-        <Carousel slides={slides} />
-      </div>
-
-      {/* Animated Background Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-5" />
+    <section className="relative min-h-[90vh] flex flex-col items-center justify-start pt-16 bg-white text-gray-900">
+      <Carousel slides={slides} />
     </section>
   );
 };
